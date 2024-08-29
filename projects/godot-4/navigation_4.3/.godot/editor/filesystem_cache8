@@ -1,0 +1,10 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1724925198
+character.gd::GDScript::-1::1724893762::0::1::::<>CharacterBody2D<>::
+character.png::CompressedTexture2D::4187425987871106343::1724893762::1724925200::1::::<><>::
+character.tscn::PackedScene::6173771701120927167::1724893762::0::1::::<><>::res://character.gd<>uid://b0wokaenwu7pj::::res://character.png
+icon.webp::CompressedTexture2D::3626017087650301524::1724893762::1724925200::1::::<><>::
+map.png::CompressedTexture2D::3145940729799782577::1724893762::1724925200::1::::<><>::
+navigation.tscn::PackedScene::3030513252173195698::1724893762::0::1::::<><>::uid://bk26gi6qsuh18::::res://map.png<>uid://bk5r48dcijlqt::::res://navigation_polygon.res<>uid://ct7veakwiei3h::::res://character.tscn
+navigation_polygon.res::NavigationPolygon::3151326167602386599::1724893762::0::1::::<><>::
+README.md::TextFile::-1::1724893762::0::1::::<><>::
