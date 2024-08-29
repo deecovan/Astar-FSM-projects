@@ -1,0 +1,51 @@
+[gd_scene load_steps=6 format=3 uid="uid://b16dc6qjv3sns"]
+
+[ext_resource type="Script" path="res://project_specific/worlds/world.gd" id="1_jlrdp"]
+[ext_resource type="PackedScene" uid="uid://ba80b3n3an62o" path="res://navigation_server_example/navigation_server_example.tscn" id="2_85r3x"]
+[ext_resource type="PackedScene" uid="uid://4oy63jugcye2" path="res://astar_2d_example/astar_2d_example.tscn" id="3_ppvex"]
+[ext_resource type="PackedScene" uid="uid://dlrct87r3eos5" path="res://astar_grid_example/astar_grid_example.tscn" id="4_wvwxq"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_agndg"]
+font_size = 26
+font_color = Color(1, 0.161709, 0.212521, 1)
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_jlrdp")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = " Scenes are meant to be run independently.
+ Please open the desired pathfinding example scene, then run it independently."
+label_settings = SubResource("LabelSettings_agndg")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ExampleScenes (run independently)" type="Node2D" parent="."]
+
+[node name="NavigationServerExample" parent="ExampleScenes (run independently)" instance=ExtResource("2_85r3x")]
+visible = false
+
+[node name="Astar2DExample" parent="ExampleScenes (run independently)" instance=ExtResource("3_ppvex")]
+visible = false
+
+[node name="AstarGridExample" parent="ExampleScenes (run independently)" instance=ExtResource("4_wvwxq")]
+visible = false

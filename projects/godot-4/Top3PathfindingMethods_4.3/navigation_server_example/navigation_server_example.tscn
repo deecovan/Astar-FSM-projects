@@ -1,0 +1,56 @@
+[gd_scene load_steps=6 format=3 uid="uid://ba80b3n3an62o"]
+
+[ext_resource type="PackedScene" uid="uid://d1x0as3m8qtnl" path="res://navigation_server_example/navigator_entity/navigator_entity.tscn" id="2_kwgv8"]
+[ext_resource type="PackedScene" uid="uid://d4nsot5hdba1q" path="res://project_specific/visual_node/visual_node.tscn" id="3_yqrj7"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_3c4ma"]
+vertices = PackedVector2Array(539.063, 101.641, 606.969, 272.859, 604.078, 531.133, 523.406, 288, 511.844, 244.789, 480.211, 213.156, 195.477, 83.2031, 437, 201.594, 393.789, 213.156, 65.8281, 195.688, 362.156, 244.789, 58.0078, 422.633, 511.844, 331.211, 480.211, 362.844, 424.492, 575.07, 437, 374.406, 295.43, 583.008, 350.594, 288, 191.594, 586.891, 66.4766, 512.008, 362.156, 331.211, 393.789, 362.844)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4), PackedInt32Array(0, 4, 5), PackedInt32Array(6, 0, 5, 7), PackedInt32Array(6, 7, 8), PackedInt32Array(9, 6, 8, 10, 11), PackedInt32Array(12, 3, 2), PackedInt32Array(13, 12, 2, 14), PackedInt32Array(15, 13, 14, 16), PackedInt32Array(11, 10, 17), PackedInt32Array(18, 19, 11, 17, 20, 16), PackedInt32Array(21, 15, 16), PackedInt32Array(16, 20, 21)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(192, 73, 546, 92, 617, 271, 614, 539, 426, 585, 296, 593, 189, 597, 57, 518, 48, 423, 56, 191)])
+source_geometry_group_name = &"navigation_polygon_source_group"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ww5t6"]
+radius = 76.0592
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_r4u1o"]
+vertices = PackedVector2Array(1046.42, 99.2109, 1156.56, 285.977, 1127.04, 473.594, 915.523, 549.398, 854.898, 406.359, 801.297, 108.641, 787.211, 298.461)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4, 5), PackedInt32Array(5, 4, 6)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(777, 301, 792, 99, 1052, 89, 1167, 284, 1136, 481, 910, 562, 846, 411)])
+
+[node name="NavigationServerExample" type="Node2D"]
+
+[node name="NavigationRegions" type="Node2D" parent="."]
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="NavigationRegions"]
+navigation_polygon = SubResource("NavigationPolygon_3c4ma")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="NavigationRegions/NavigationRegion2D"]
+position = Vector2(437, 288)
+
+[node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="NavigationRegions/NavigationRegion2D/StaticBody2D"]
+radius = 92.79
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NavigationRegions/NavigationRegion2D/StaticBody2D"]
+shape = SubResource("CircleShape2D_ww5t6")
+
+[node name="NavigationRegion2D2" type="NavigationRegion2D" parent="NavigationRegions"]
+navigation_polygon = SubResource("NavigationPolygon_r4u1o")
+
+[node name="NavigationLinks" type="Node2D" parent="."]
+
+[node name="NavigationLink2D" type="NavigationLink2D" parent="NavigationLinks"]
+position = Vector2(552, 183)
+end_position = Vector2(254, -41)
+
+[node name="NavigationLink2D2" type="NavigationLink2D" parent="NavigationLinks"]
+position = Vector2(817, 314)
+end_position = Vector2(-223, 22)
+
+[node name="NavigatorEntity" parent="." node_paths=PackedStringArray("movement_target") instance=ExtResource("2_kwgv8")]
+position = Vector2(143, 309)
+movement_target = NodePath("../Target")
+
+[node name="Target" parent="." instance=ExtResource("3_yqrj7")]
+position = Vector2(832, 241)
+color = 1
+follow_mouse = true
