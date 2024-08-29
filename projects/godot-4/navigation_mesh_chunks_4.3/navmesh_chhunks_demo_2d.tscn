@@ -15,13 +15,18 @@ unique_name_in_owner = true
 [node name="StaticBody2D" type="StaticBody2D" parent="ParseRootNode"]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ParseRootNode/StaticBody2D"]
-polygon = PackedVector2Array(244, 147, 636, 155, 376, 391, 460, 655, 804, 795, 756, 971, 484, 839, 308, 963, 132, 811, 128, 559)
+polygon = PackedVector2Array(244, 147, 724, 138, 709, 291, 397, 340, 329, 785, 804, 795, 756, 971, 426, 969, 138, 1000, 132, 811, 128, 559)
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="ParseRootNode/StaticBody2D"]
-polygon = PackedVector2Array(1312, 207, 1596, 91, 1832, 175, 1739, 926, 1562, 796, 1508, 935, 1184, 811, 1324, 533, 1499, 599, 1684, 511, 1596, 322)
+position = Vector2(7, 22)
+polygon = PackedVector2Array(1393, 80, 1596, 91, 1832, 175, 1800, 618, 1658, 706, 1411, 657, 926, 953, 1066, 771, 1274, 470, 1566, 455, 1596, 322)
 
 [node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="ParseRootNode/StaticBody2D"]
-polygon = PackedVector2Array(661, 339, 943, 397, 1112, 178, 1172, 443, 960, 639, 700, 579)
+polygon = PackedVector2Array(585, 461, 908, 468, 965, 170, 1180, 194, 1418, 365, 1131, 345, 960, 639, 543, 663)
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="ParseRootNode/StaticBody2D"]
+position = Vector2(797, 386)
+polygon = PackedVector2Array(585, 461, 908, 468, 989, 399, 1052, 524, 926, 607, 525, 612)
 
 [node name="DebugPaths" type="Node2D" parent="."]
 unique_name_in_owner = true

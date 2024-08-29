@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cus4p3icaseng"
-path="res://.godot/imported/simple64x_tiles.png-2949dfabe8adf8d31aea57041e3267ce.ctex"
+uid="uid://c68pt2228mfbi"
+path="res://.godot/imported/icon.webp-e94f9a68b0f625a567a797079e4d325f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://simple64x_tiles.png"
-dest_files=["res://.godot/imported/simple64x_tiles.png-2949dfabe8adf8d31aea57041e3267ce.ctex"]
+source_file="res://icon.webp"
+dest_files=["res://.godot/imported/icon.webp-e94f9a68b0f625a567a797079e4d325f.ctex"]
 
 [params]
 
