@@ -1,0 +1,15 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1725265707
+export_presets.cfg::TextFile::-1::1722873559::0::1::::<><>::
+icon.webp::CompressedTexture2D::116628296815979557::1722872504::1722872515::1::::<><>::
+README.md::TextFile::-1::1722872504::0::1::::<><>::
+::res://img/::1722872515
+crown.png::CompressedTexture2D::1566916425130917280::1722872504::1722872515::1::::<><>::
+::res://scene/::1722872504
+combo.tscn::PackedScene::6342223881879856890::1722872504::0::1::::<><>::res://script/combo.gd<>uid://c240icwf4uov8::::res://scene/main.tscn
+game.tscn::PackedScene::-1::1722872504::0::1::::<><>::res://script/game.gd
+main.tscn::PackedScene::6729339450950342067::1722872504::0::1::::<><>::res://script/main.gd<>res://scene/game.tscn
+::res://script/::1722872504
+combo.gd::GDScript::-1::1722872504::0::1::::<>Control<>::
+game.gd::GDScript::-1::1722872504::0::1::::<>Control<>::
+main.gd::GDScript::-1::1722872504::0::1::::<>Control<>::
