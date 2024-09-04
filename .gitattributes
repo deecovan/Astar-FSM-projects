@@ -1,2 +1,5 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+# Properly detect languages on GitHub
+*.rst linguist-detectable=true
+
+# Normalize EOL for all files that Git considers text files
+* text=auto eol=lf
